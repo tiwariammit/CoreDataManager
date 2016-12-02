@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoredataSwift3/CoredataManager.swift"
-            timestampString = "502359318.950603"
+            timestampString = "502360697.3008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "convertAnyobjectToJSON(anyObject:)"
             landmarkType = "7">
          </BreakpointContent>

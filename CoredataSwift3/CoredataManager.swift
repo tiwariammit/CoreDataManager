@@ -19,6 +19,7 @@ class CoredataManager: NSObject {
         return documentsDirectory
     }
     
+    //MARK:-Save data on coredata
     func saveDataOnCoredata(data: [AnyObject]){
         
         let dataBaseUrl = getDocumentsDirectory()
@@ -64,6 +65,8 @@ class CoredataManager: NSObject {
         managedObject.id = json["news_id"].int64!
     }
     
+    
+    //MARK:-Retrive dave data from coredata
     func retriveSavedData(saveResult:([TestEnt])->(), unknownError:(Bool)->()){
         
         let request:NSFetchRequest<TestEnt> = TestEnt.fetchRequest()
@@ -153,30 +156,31 @@ class CoredataManager: NSObject {
     
     
     //MARK:-delete database
-     func deleteDataBaseOfNewsIfItDeletedFromBackEnd(newsID: Int){
+    func deleteDataBaseOfNewsIfItDeletedFromBackEnd(newsID: Int){
         
-            do{
-                let request: NSFetchRequest<TestEnt> = TestEnt.fetchRequest()
-                let results = try managedObjectContext.fetch(request as! NSFetchRequest<NSFetchRequestResult>)
+        do{
+            let request: NSFetchRequest<TestEnt> = TestEnt.fetchRequest()
+            let results = try managedObjectContext.fetch(request as! NSFetchRequest<NSFetchRequestResult>)
+            
+            if results.count > 0 {
                 
-                if results.count > 0 {
+                for item in results as! [NSManagedObject]{
                     
-                    for item in results as! [NSManagedObject]{
-                        
-                        managedObjectContext.delete(item)
-                        
-                    }
+                    managedObjectContext.delete(item)
+                    
                 }
-
-                
-            } catch{
-                print(error)
             }
-           }
+            
+            
+        } catch{
+            print(error)
+        }
+    }
 }
 
 
 
+//MARK:-Demo Data
 class test : NSObject{
     
     //    "2016-09-05 12:38:18"
