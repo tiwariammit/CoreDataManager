@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5AE950E6E328604001199C9 /* Pods_CoredataSwift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F1B5624590C0CDF76CBFA2 /* Pods_CoredataSwift3.framework */; };
+		F0F6F5A91DF13BA000701866 /* CoredataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0F6F5A71DF13BA000701866 /* CoredataModel.xcdatamodeld */; };
+		F0F6F5AC1DF13C4200701866 /* TestEnt+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F6F5AA1DF13C4200701866 /* TestEnt+CoreDataClass.swift */; };
+		F0F6F5AD1DF13C4200701866 /* TestEnt+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F6F5AB1DF13C4200701866 /* TestEnt+CoreDataProperties.swift */; };
 		F0FD694D1DF136120008B746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FD694C1DF136120008B746 /* AppDelegate.swift */; };
 		F0FD694F1DF136120008B746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FD694E1DF136120008B746 /* ViewController.swift */; };
 		F0FD69521DF136120008B746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FD69501DF136120008B746 /* Main.storyboard */; };
-		F0FD69551DF136120008B746 /* CoredataSwift3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0FD69531DF136120008B746 /* CoredataSwift3.xcdatamodeld */; };
 		F0FD69571DF136120008B746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0FD69561DF136120008B746 /* Assets.xcassets */; };
 		F0FD695A1DF136120008B746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FD69581DF136120008B746 /* LaunchScreen.storyboard */; };
 		F0FD69651DF136120008B746 /* CoredataSwift3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FD69641DF136120008B746 /* CoredataSwift3Tests.swift */; };
 		F0FD69701DF136120008B746 /* CoredataSwift3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FD696F1DF136120008B746 /* CoredataSwift3UITests.swift */; };
+		F0FD697E1DF136CF0008B746 /* CoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FD697D1DF136CF0008B746 /* CoredataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28F1B5624590C0CDF76CBFA2 /* Pods_CoredataSwift3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoredataSwift3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E4B7C23E23915F9E6F29482 /* Pods-CoredataSwift3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoredataSwift3.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoredataSwift3/Pods-CoredataSwift3.release.xcconfig"; sourceTree = "<group>"; };
+		F0F6F5A81DF13BA000701866 /* CoredataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoredataModel.xcdatamodel; sourceTree = "<group>"; };
+		F0F6F5AA1DF13C4200701866 /* TestEnt+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestEnt+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F0F6F5AB1DF13C4200701866 /* TestEnt+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestEnt+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F0FD69491DF136110008B746 /* CoredataSwift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoredataSwift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FD694C1DF136120008B746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0FD694E1DF136120008B746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F0FD69511DF136120008B746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F0FD69541DF136120008B746 /* CoredataSwift3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoredataSwift3.xcdatamodel; sourceTree = "<group>"; };
 		F0FD69561DF136120008B746 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0FD69591DF136120008B746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0FD695B1DF136120008B746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +57,8 @@
 		F0FD696B1DF136120008B746 /* CoredataSwift3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoredataSwift3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FD696F1DF136120008B746 /* CoredataSwift3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataSwift3UITests.swift; sourceTree = "<group>"; };
 		F0FD69711DF136120008B746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0FD697D1DF136CF0008B746 /* CoredataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoredataManager.swift; sourceTree = "<group>"; };
+		FF3B1686197323206CD19BDE /* Pods-CoredataSwift3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoredataSwift3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoredataSwift3/Pods-CoredataSwift3.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AE950E6E328604001199C9 /* Pods_CoredataSwift3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E4253FB7069179F7272C733 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28F1B5624590C0CDF76CBFA2 /* Pods_CoredataSwift3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2DD2FECED12F3E8110A2274 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF3B1686197323206CD19BDE /* Pods-CoredataSwift3.debug.xcconfig */,
+				6E4B7C23E23915F9E6F29482 /* Pods-CoredataSwift3.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F0FD69401DF136110008B746 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +111,8 @@
 				F0FD69631DF136120008B746 /* CoredataSwift3Tests */,
 				F0FD696E1DF136120008B746 /* CoredataSwift3UITests */,
 				F0FD694A1DF136110008B746 /* Products */,
+				E2DD2FECED12F3E8110A2274 /* Pods */,
+				8E4253FB7069179F7272C733 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +135,10 @@
 				F0FD69561DF136120008B746 /* Assets.xcassets */,
 				F0FD69581DF136120008B746 /* LaunchScreen.storyboard */,
 				F0FD695B1DF136120008B746 /* Info.plist */,
-				F0FD69531DF136120008B746 /* CoredataSwift3.xcdatamodeld */,
+				F0FD697D1DF136CF0008B746 /* CoredataManager.swift */,
+				F0F6F5AA1DF13C4200701866 /* TestEnt+CoreDataClass.swift */,
+				F0F6F5AB1DF13C4200701866 /* TestEnt+CoreDataProperties.swift */,
+				F0F6F5A71DF13BA000701866 /* CoredataModel.xcdatamodeld */,
 			);
 			path = CoredataSwift3;
 			sourceTree = "<group>";
@@ -135,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0FD69741DF136120008B746 /* Build configuration list for PBXNativeTarget "CoredataSwift3" */;
 			buildPhases = (
+				66204C5B5FAAF0DEAE1C6D55 /* [CP] Check Pods Manifest.lock */,
 				F0FD69451DF136110008B746 /* Sources */,
 				F0FD69461DF136110008B746 /* Frameworks */,
 				F0FD69471DF136110008B746 /* Resources */,
+				D7737AE4EB75EAA1AAB98DEB /* [CP] Embed Pods Frameworks */,
+				2309F70BD724A2A9C2B94BB4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,13 +293,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2309F70BD724A2A9C2B94BB4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoredataSwift3/Pods-CoredataSwift3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66204C5B5FAAF0DEAE1C6D55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7737AE4EB75EAA1AAB98DEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoredataSwift3/Pods-CoredataSwift3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0FD69451DF136110008B746 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0FD69551DF136120008B746 /* CoredataSwift3.xcdatamodeld in Sources */,
+				F0F6F5AD1DF13C4200701866 /* TestEnt+CoreDataProperties.swift in Sources */,
 				F0FD694F1DF136120008B746 /* ViewController.swift in Sources */,
+				F0F6F5A91DF13BA000701866 /* CoredataModel.xcdatamodeld in Sources */,
+				F0F6F5AC1DF13C4200701866 /* TestEnt+CoreDataClass.swift in Sources */,
+				F0FD697E1DF136CF0008B746 /* CoredataManager.swift in Sources */,
 				F0FD694D1DF136120008B746 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +501,7 @@
 		};
 		F0FD69751DF136120008B746 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF3B1686197323206CD19BDE /* Pods-CoredataSwift3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CoredataSwift3/Info.plist;
@@ -426,6 +514,7 @@
 		};
 		F0FD69761DF136120008B746 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E4B7C23E23915F9E6F29482 /* Pods-CoredataSwift3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CoredataSwift3/Info.plist;
@@ -509,6 +598,7 @@
 				F0FD69761DF136120008B746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0FD69771DF136120008B746 /* Build configuration list for PBXNativeTarget "CoredataSwift3Tests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +607,7 @@
 				F0FD69791DF136120008B746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0FD697A1DF136120008B746 /* Build configuration list for PBXNativeTarget "CoredataSwift3UITests" */ = {
 			isa = XCConfigurationList;
@@ -525,17 +616,18 @@
 				F0FD697C1DF136120008B746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F0FD69531DF136120008B746 /* CoredataSwift3.xcdatamodeld */ = {
+		F0F6F5A71DF13BA000701866 /* CoredataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F0FD69541DF136120008B746 /* CoredataSwift3.xcdatamodel */,
+				F0F6F5A81DF13BA000701866 /* CoredataModel.xcdatamodel */,
 			);
-			currentVersion = F0FD69541DF136120008B746 /* CoredataSwift3.xcdatamodel */;
-			path = CoredataSwift3.xcdatamodeld;
+			currentVersion = F0F6F5A81DF13BA000701866 /* CoredataModel.xcdatamodel */;
+			path = CoredataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
