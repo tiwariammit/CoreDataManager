@@ -32,13 +32,20 @@ class CoredataManager: NSObject {
             let convetedJSonData = self.convertAnyobjectToJSON(anyObject: data as AnyObject)
             for (_ ,object) in convetedJSonData{
                 
-                self.checkIFNewsIdForEnglishAlreadyExists(newsId: object["news_id"].intValue, completion: { (count) in
+                self.checkIFNewsIdAlreadyExists(newsId: object["news_id"].intValue, completion: { (count) in
                     if count != 0{
                         
-                        self.updateDataBaseOfEnglishNews(json: object, newsId: object["news_id"].intValue)
+                        self.updatingDataBase(json: object, newsId: object["news_id"].intValue)
                     }else{
+                        var newPrivateAsyncMO_En : TestEnt!
+                        if #available(iOS 10.0, *) {
+                            
+                            newPrivateAsyncMO_En = TestEnt(context: managedObjectContext)
+                            
+                        }else{
+                            newPrivateAsyncMO_En = NSEntityDescription.insertNewObject(forEntityName: "TestEnt", into: privateAsyncMOC_En) as! TestEnt
+                        }
                         
-                        let newPrivateAsyncMO_En = NSEntityDescription.insertNewObject(forEntityName: "TestEnt", into: privateAsyncMOC_En) as! TestEnt
                         self.processJSONIntoCoreData_En(managedObject: newPrivateAsyncMO_En, json: object)
                     }
                 })
@@ -86,7 +93,7 @@ class CoredataManager: NSObject {
     //MARK:-check English NewID Already Exists or not
     // here coredata have not primary key concept so we sequently check data already exist in coredata or not.
     // data is updated if and only if updating data is already exist in coredata
-    func checkIFNewsIdForEnglishAlreadyExists(newsId:Int,completion:(_ count:Int)->()){
+    func checkIFNewsIdAlreadyExists(newsId:Int,completion:(_ count:Int)->()){
         
         let fetchReq:NSFetchRequest<TestEnt> = TestEnt.fetchRequest()
         fetchReq.predicate = NSPredicate(format: "id = %d",newsId)
@@ -105,7 +112,7 @@ class CoredataManager: NSObject {
     }
     
     //MARK:-Update coredata
-    func updateDataBaseOfEnglishNews(json: JSON, newsId : Int){
+    func updatingDataBase(json: JSON, newsId : Int){
         
         do {
             let fetchRequest:NSFetchRequest<TestEnt> = TestEnt.fetchRequest()
@@ -156,7 +163,7 @@ class CoredataManager: NSObject {
     
     
     //MARK:-delete database
-    func deleteDataBaseOfNewsIfItDeletedFromBackEnd(newsID: Int){
+    func deleteDataBaseOfSeletedNewsID(newsID: Int){
         
         do{
             let request: NSFetchRequest<TestEnt> = TestEnt.fetchRequest()
@@ -197,7 +204,6 @@ class test : NSObject{
         let object2 = ["category_id":6,"category_name":"Business","date":date2,"description":"asdsdsads","image_url":"http://inheadline.com/stage/public/assets/uploads/news/1_913941472725977.jpeg","language_id":1,"location":"National","news_id":newsID2,"news_title":title2,"source_name":"bbc","source_url":"http://www.bbc.com/news","special_cat_id":"","special_category":"","type":"None","writer_name":"InHeadline Stage"] as [String : Any]
         
         let object = [object1,object2]
-        
         
         CoredataManager().saveDataOnCoredata(data: object as [AnyObject])
         

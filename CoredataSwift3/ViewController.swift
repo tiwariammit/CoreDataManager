@@ -9,15 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         test().newsAdded() // data Save
         
-        //delete 
+        //delete
         
-//        CoredataManager().deleteDataBaseOfNewsIfItDeletedFromBackEnd(newsID: 1000)
+        //  CoredataManager().deleteDataBaseOfSeletedNewsID(newsID: 1000)
         
         CoredataManager().retriveSavedData(saveResult: { (data) in
             
@@ -27,19 +27,21 @@ class ViewController: UIViewController {
                 print(id)
                 print(name)
             }
-            }) { (unknownError) in
-                if unknownError{
-                    print("Data can't retrive")
-                }
-                
+        }) { (unknownError) in
+            if unknownError{
+                print("Data can't retrive")
+            }else{
+                print("Nothing to save")
+            }
+            
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
